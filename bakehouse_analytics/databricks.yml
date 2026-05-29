@@ -25,7 +25,7 @@ targets:
     workspace:
       host: https://dbc-417b9f91-269e.cloud.databricks.com
     variables:
-      catalog: bakehouse_analytics_Dev
+      catalog: bakehouse_analytics_dev
       schema: rnd
   prod:
     mode: production
@@ -34,8 +34,8 @@ targets:
       # We explicitly deploy to /Workspace/Users/prashant.badwe.work@gmail.com to make sure we only have a single copy.
       root_path: /Workspace/Users/prashant.badwe.work@gmail.com/.bundle/${bundle.name}/${bundle.target}
     variables:
-      catalog: workspace
-      schema: prod
+      catalog: bakehouse_analytics_prod
+      schema: bronze_prod
     permissions:
       - user_name: prashant.badwe.work@gmail.com
         level: CAN_MANAGE
